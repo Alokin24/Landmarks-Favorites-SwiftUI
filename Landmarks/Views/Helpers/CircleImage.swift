@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CircleImage: View {
     
+    @EnvironmentObject var modelData: ModelData
+    
     var image: Image
     var body: some View {
         image
@@ -23,6 +25,9 @@ struct CircleImage: View {
 }
 
 struct CircleImage_Previews: PreviewProvider {
+    
+    static var landmarks = ModelData().landmarks
+    
     static var previews: some View {
         CircleImage(image: landmarks[0].image)
     }
